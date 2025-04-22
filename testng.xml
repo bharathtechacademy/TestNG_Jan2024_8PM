@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.creatio.crm.framework.listeners.TestListener"></listener>
+    </listeners>
+    <parameter name="browser" value="chrome"></parameter>
+    <test thread-count="5" name="E2ETestSuite">
+        <classes>
+            <class name="com.creatio.crm.application.tests.ApplicationTest">
+                <methods>
+                    <include name="verifyCookiesPopUp"/>
+                    <include name="verifyCookiesPopUpContent"/>
+                    <include name="verifyCookiesPopUpLogos"/>
+                    <include name="verifyCookiesPopUpSelectionButtons"/>
+                    <include name="verifyCookiesPopUpSwitchButtons"/>
+                    <include name="verifyCookiesPopUpExpandedView"/>
+                    <include name="verifyCookiesSelectionByAllowingCookies"/>
+                    <include name="verifyCookiesSelectionByDenyingCookies"/>
+                    <include name="verifySignUpPage"/>
+                    <include name="verifySignUpForNewUserAccount"/>
+                    <include name="verifyApplicationLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
